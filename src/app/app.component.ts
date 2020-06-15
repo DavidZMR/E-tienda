@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Usuario } from '../modelos/Usuario';
+import { Usuario } from './modelos/Usuario';
 import { FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from './auth/services/auth.service';
 import { ProductosService } from './services/productos.service';
-import { Producto } from 'src/modelos/Producto';
+import { Producto } from './modelos/Producto';
 
 @Component({
   selector: 'app-root',
