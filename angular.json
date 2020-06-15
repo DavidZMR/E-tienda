@@ -117,8 +117,13 @@
               "devServerTarget": "isc200420:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "isc200420"
 }
