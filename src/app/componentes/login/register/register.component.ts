@@ -98,7 +98,10 @@ export class RegisterComponent implements OnInit {
     usuario.correo = this.registerForm.value.correo.trim();
     usuario.apellidos = this.registerForm.value.apellidos.trim();
     usuario.id = id;
-    this.db.list('usuarios/' + id).push(usuario);
+    this.db.list('usuarios/' + id).set("nombre", usuario.nombre);
+    this.db.list('usuarios/' + id).set("apellidos", usuario.apellidos);
+    this.db.list('usuarios/' + id).set("correo", usuario.correo);
+    this.db.list('usuarios/' + id).set("id", usuario.id);
 
     Swal.fire({
       icon: 'success',

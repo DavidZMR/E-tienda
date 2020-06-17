@@ -5,4 +5,5 @@ export class Usuario {
     correo: string;
     image: string;
     id: string;
+    idRegistro: string;
 }

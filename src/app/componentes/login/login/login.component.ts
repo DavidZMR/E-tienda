@@ -182,16 +182,12 @@ export class LoginComponent implements OnInit {
     let usuario = new Usuario();
 
     s.forEach(item => {
-      var a = JSON.parse(JSON.stringify(item[0]));
-      console.log(item[0]);
-      console.log("---------");
-      console.log(a.nombre);
+      console.log(item);
 
-
-      usuario.nombre = a.nombre;
-      usuario.apellidos = a.apellidos;
-      usuario.correo = a.correo;
-      usuario.id = a.id;
+      usuario.nombre = item[3].toString();
+      usuario.apellidos = item[0].toString();
+      usuario.correo = item[1].toString();
+      usuario.id = item[2].toString();
 
       localStorage.setItem('usuario', JSON.stringify(usuario));
 
