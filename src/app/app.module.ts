@@ -8,10 +8,16 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from './../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { LoginTelefonoComponent } from './componentes/login/login-telefono/login-telefono.component';
+import { LoginComponent } from './componentes/login/login/login.component';
+import { RegisterComponent } from './componentes/login/register/register.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginTelefonoComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

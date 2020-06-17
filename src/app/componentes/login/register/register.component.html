@@ -1,0 +1,70 @@
+<div class="form" #div_form style="display: block;">
+
+    <div class="form-header">
+        <img
+            src="http://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=http%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2015%2F10%2Fnexus2cee_Search-Thumb-150x150.png&w=150&h=150&zc=3">
+        <h4>E-Tienda</h4>
+        <h5 class="text-muted">Registrar al sistema</h5>
+    </div>
+
+    <form [formGroup]="registerForm">
+        <div class="row inputs">
+            <div class="col-md-6">
+                <div class="group form-control">
+                    <input type="text" required formControlName="nombre">
+                    <label>Nombre</label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="group form-control">
+                    <input type="text" required formControlName="apellidos">
+                    <label>Apellidos</label>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="group form-control">
+                    <input type="text" required formControlName="correo">
+                    <label>Correo electrónico</label>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="group form-control">
+                    <input type="password" required #pass formControlName="pass">
+                    <label>Contraseña</label>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="group form-control">
+                    <input type="password" required #pass2 formControlName="pass2">
+                    <label>Confirmar</label>
+                </div>
+            </div>
+
+            <div class="col-md-1 ver-pass" (click)="togglePass(pass, pass2)">
+                <div #eye>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+                <div #eyeTapado style="display: none;">
+                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <button class="btn" (click)="clickSiguiente();" #btnSiguiente>Registrar</button>
+
+    <div class="row div-register">
+        <div class="col-md-12 align-items-center text-center">
+            <a class="btn-invisible" href="#">Ya tengo una cuenta</a>
+        </div>
+    </div>
+
+    <div class="loader" style="display: none;" #loader>
+        <div class="loader-wheel"></div>
+    </div>
+</div>

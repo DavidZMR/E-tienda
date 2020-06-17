@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { auth } from 'firebase/app';
 import { User } from 'firebase';
 import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
+import Swal from 'sweetalert2'
 
 @Injectable()
 export class AuthService {
@@ -10,20 +11,16 @@ export class AuthService {
 
   constructor(public afAuth: AngularFireAuth) { }
 
+  get windowRef() {
+    return window;
+  }
+
   async fireLogin(correo: string, pass: string) {
-    const result = await this.afAuth.signInWithEmailAndPassword(correo, pass);
-    console.log("Login result: ");
-    console.log(result);
-    
-    
-    return result;
+    return await this.afAuth.signInWithEmailAndPassword(correo, pass);
   }
 
   async fireRegister(correo: string, pass: string) {
-    const result = await this.afAuth.createUserWithEmailAndPassword(correo, pass);
-    console.log("Registrado: " + correo + " (" + pass + "): ");
-    
-    return result;
+    return await this.afAuth.createUserWithEmailAndPassword(correo, pass);
   }
 
   async logout() {
