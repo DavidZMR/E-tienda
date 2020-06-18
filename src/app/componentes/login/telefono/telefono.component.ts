@@ -34,11 +34,14 @@ export class TelefonoComponent implements OnInit {
 
   ngOnInit(): void {
     var json = JSON.parse(localStorage.getItem('usuario'));
-    this.usuario = new Usuario();
-    this.usuario.nombre = json.nombre;
-    this.usuario.apellidos = json.apellidos;
-    this.usuario.id = json.id;
-    this.usuario.correo = json.correo;
+    if (json != undefined) {
+      this.usuario = new Usuario();
+      this.usuario.nombre = json.nombre;
+      this.usuario.apellidos = json.apellidos;
+      this.usuario.id = json.id;
+      this.usuario.correo = json.correo;
+    }
+    
 
     this.windowRef = this.win.windowRef;
     this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
