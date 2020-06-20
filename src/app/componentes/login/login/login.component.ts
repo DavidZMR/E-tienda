@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 import { Usuario } from 'src/app/modelos/Usuario';
 import { AngularFireDatabase } from '@angular/fire/database';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -188,7 +189,7 @@ export class LoginComponent implements OnInit {
       usuario.apellidos = item[0].toString();
       usuario.correo = item[1].toString();
       usuario.id = item[2].toString();
-
+      location.reload();
       localStorage.setItem('usuario', JSON.stringify(usuario));
 
       Swal.fire({

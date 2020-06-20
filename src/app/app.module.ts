@@ -1,3 +1,4 @@
+import { CheckSessionService } from './services/check-session.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,6 +13,8 @@ import { LoginTelefonoComponent } from './componentes/login/login-telefono/login
 import { LoginComponent } from './componentes/login/login/login.component';
 import { RegisterComponent } from './componentes/login/register/register.component';
 import { TelefonoComponent } from './componentes/login/telefono/telefono.component';
+import { LoginButtonsComponent } from './componentes/login-buttons/login-buttons.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { TelefonoComponent } from './componentes/login/telefono/telefono.compone
     LoginTelefonoComponent,
     LoginComponent,
     RegisterComponent,
-    TelefonoComponent
+    TelefonoComponent,
+    LoginButtonsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,9 @@ import { TelefonoComponent } from './componentes/login/telefono/telefono.compone
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [
+    CheckSessionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
