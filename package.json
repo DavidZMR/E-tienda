@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "proyecto-angular",
+=======
+  "name": "isc200420",
+>>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -11,6 +15,7 @@
   },
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@angular/animations": "~9.1.4",
     "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.4",
@@ -29,15 +34,39 @@
     "ng-connection-service": "^1.0.4",
     "rxjs": "~6.5.4",
     "sweetalert": "^2.1.2",
+=======
+    "@angular/animations": "~9.1.3",
+    "@angular/common": "~9.1.3",
+    "@angular/compiler": "~9.1.3",
+    "@angular/core": "~9.1.3",
+    "@angular/fire": "^6.0.0",
+    "@angular/forms": "~9.1.3",
+    "@angular/platform-browser": "~9.1.3",
+    "@angular/platform-browser-dynamic": "~9.1.3",
+    "@angular/router": "~9.1.3",
+    "angularfire2": "^5.4.2",
+    "bootstrap": "^4.5.0",
+    "firebase": "^7.15.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "rxjs": "~6.5.4",
+>>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
     "sweetalert2": "^9.15.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@angular-devkit/build-angular": "~0.901.4",
     "@angular/cli": "~9.1.4",
     "@angular/compiler-cli": "~9.1.4",
     "@angular/language-service": "~9.1.4",
+=======
+    "@angular-devkit/build-angular": "~0.901.3",
+    "@angular/cli": "~9.1.3",
+    "@angular/compiler-cli": "~9.1.3",
+    "@angular/language-service": "~9.1.3",
+>>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
@@ -52,6 +81,15 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
+<<<<<<< HEAD
     "typescript": "~3.8.3"
+=======
+    "typescript": "~3.8.3",
+    "@angular-devkit/architect": "~0.900",
+    "firebase-tools": "^8.0.0",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^6.2.2",
+    "inquirer-autocomplete-prompt": "^1.0.1"
+>>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
   }
 }

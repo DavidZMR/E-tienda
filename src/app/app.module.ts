@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -40,10 +41,30 @@ import { ButtonsModule, WavesModule, CardsModule } from 'angular-bootstrap-md';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { BuscadorComponent } from './buscador/buscador.component';
+=======
+import { CheckSessionService } from './services/check-session.service';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from './../environments/environment';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { LoginTelefonoComponent } from './componentes/login/login-telefono/login-telefono.component';
+import { LoginComponent } from './componentes/login/login/login.component';
+import { RegisterComponent } from './componentes/login/register/register.component';
+import { TelefonoComponent } from './componentes/login/telefono/telefono.component';
+import { LoginButtonsComponent } from './componentes/login-buttons/login-buttons.component';
+
+>>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     NavbarComponent,
     HomeComponent,
     TiendaComponent,
@@ -93,6 +114,25 @@ import { BuscadorComponent } from './buscador/buscador.component';
     
   ],
   providers: [],
+=======
+    LoginTelefonoComponent,
+    LoginComponent,
+    RegisterComponent,
+    TelefonoComponent,
+    LoginButtonsComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
+  ],
+  providers: [
+    CheckSessionService
+  ],
+>>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
   bootstrap: [AppComponent]
 })
 export class AppModule { }

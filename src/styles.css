@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 html, body { height: 100%; }
@@ -152,3 +153,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+=======
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import './assets/plugins/font-awesome/css/all.min.css';
+>>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982

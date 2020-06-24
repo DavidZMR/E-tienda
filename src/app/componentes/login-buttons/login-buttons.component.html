@@ -1,0 +1,12 @@
+<router-outlet></router-outlet>
+<ng-container *ngIf="!session; else elseTemplate">
+    <div class="form-check-inline">
+        <button class="btn btn-outline-dark my-2 my-sm-0 mx-1" type="button" (click)="goLogin()">Login</button>
+        <button class="btn btn-outline-dark my-2 my-sm-0 mx-1" type="button" (click)="goRegister()">Sign in</button>
+    </div>
+</ng-container>
+<ng-template #elseTemplate>
+    <div class="form-check-inline">
+        <button class="btn btn-outline-dark my-2 my-sm-0 mx-1" type="button" (click)="logout()">Logout</button>
+    </div>
+</ng-template>
