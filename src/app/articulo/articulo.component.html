@@ -1,0 +1,28 @@
+<br>
+<hr>
+<h1 class="animated fadeIn">{{articulo.nombre}}</h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+
+    <div class="col md-4 text-center">
+        <img width="300px" src="{{articulo.img}}" alt="" class="img-fluid">
+        <br><br>
+        <a [routerLink]="['/articulos']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+
+    <div class="col md-8">
+        <h4 class="card-title">
+            <strong>{{articulo.nombre}}</strong>
+        </h4>
+        <br>
+        <h5 class="indigo-text">
+            <strong>${{articulo.precio}}.00</strong>
+        </h5>
+        <br>
+        <mdb-card-text>
+            {{articulo.descripcion}}
+        </mdb-card-text>
+    </div>
+
+</div>
