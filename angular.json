@@ -3,11 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
     "proyectoAngular": {
-=======
-    "isc200420": {
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -17,11 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
             "outputPath": "dist/proyectoAngular",
-=======
-            "outputPath": "dist",
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -32,7 +24,6 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -45,17 +36,6 @@
             ]
           },
           "configurations": {
-=======
-              "src/styles.css"
-            ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.slim.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
-          },
-          "configurations": { 
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
             "production": {
               "fileReplacements": [
                 {
@@ -89,30 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-<<<<<<< HEAD
             "browserTarget": "proyectoAngular:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "proyectoAngular:build:production"
-=======
-            "browserTarget": "isc200420:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "isc200420:build:production"
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
             "browserTarget": "proyectoAngular:build"
-=======
-            "browserTarget": "isc200420:build"
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
           }
         },
         "test": {
@@ -127,10 +95,7 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-=======
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
               "src/styles.css"
             ],
             "scripts": []
@@ -153,7 +118,6 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-<<<<<<< HEAD
             "devServerTarget": "proyectoAngular:serve"
           },
           "configurations": {
@@ -161,26 +125,9 @@
               "devServerTarget": "proyectoAngular:serve:production"
             }
           }
-=======
-            "devServerTarget": "isc200420:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "isc200420:serve:production"
-            }
-          }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {}
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
         }
       }
     }
   },
-<<<<<<< HEAD
   "defaultProject": "proyectoAngular"
-=======
-  "defaultProject": "isc200420"
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
 }

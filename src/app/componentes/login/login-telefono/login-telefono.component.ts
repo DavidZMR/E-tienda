@@ -17,7 +17,7 @@ export class LoginTelefonoComponent implements OnInit {
 
   ngOnInit(): void {
     this.windowRef = this.win.windowRef;
-    this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+     this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
     this.windowRef.recaptchaVerifier.render();
   }
 

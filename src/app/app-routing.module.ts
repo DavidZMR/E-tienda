@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home/home.component';
@@ -10,6 +9,8 @@ import { RegistroComponent } from './registro/registro.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { ArticuloComponent } from '../app/articulo/articulo.component';
+import { RegisterComponent } from './componentes/login/register/register.component';
+import { LoginComponent } from './componentes/login/login/login.component';
 
 const routes: Routes = [
 
@@ -23,19 +24,9 @@ const routes: Routes = [
    {path: 'articulo/:id', component:ArticuloComponent},
   {path: 'buscador/:nombre', component:BuscadorComponent},
    {path: '**', pathMatch:'full', redirectTo: 'home'}
-=======
-import { RegisterComponent } from './componentes/login/register/register.component';
-import { LoginComponent } from './componentes/login/login/login.component';
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-
-
-
-const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent}
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
+    //{path: 'login', component: LoginComponent},
+  // {path: 'register', component: RegisterComponent}
+  
 ];
 
 @NgModule({
@@ -43,9 +34,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982

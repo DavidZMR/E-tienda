@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -41,14 +40,7 @@ import { ButtonsModule, WavesModule, CardsModule } from 'angular-bootstrap-md';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { BuscadorComponent } from './buscador/buscador.component';
-=======
 import { CheckSessionService } from './services/check-session.service';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from './../environments/environment';
@@ -59,12 +51,9 @@ import { RegisterComponent } from './componentes/login/register/register.compone
 import { TelefonoComponent } from './componentes/login/telefono/telefono.component';
 import { LoginButtonsComponent } from './componentes/login-buttons/login-buttons.component';
 
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
-
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
     NavbarComponent,
     HomeComponent,
     TiendaComponent,
@@ -77,7 +66,12 @@ import { LoginButtonsComponent } from './componentes/login-buttons/login-buttons
     RegistroComponent,
     IngresoComponent,
     BuscadorComponent,
-    ],
+    LoginTelefonoComponent,
+    LoginComponent,
+    RegisterComponent,
+    TelefonoComponent,
+    LoginButtonsComponent  
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -109,19 +103,6 @@ import { LoginButtonsComponent } from './componentes/login-buttons/login-buttons
     CardsModule,
     MatChipsModule,
     MatExpansionModule,
-    
-
-    
-  ],
-  providers: [],
-=======
-    LoginTelefonoComponent,
-    LoginComponent,
-    RegisterComponent,
-    TelefonoComponent,
-    LoginButtonsComponent
-  ],
-  imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
@@ -132,7 +113,6 @@ import { LoginButtonsComponent } from './componentes/login-buttons/login-buttons
   providers: [
     CheckSessionService
   ],
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -25,7 +25,9 @@ export class LoginComponent implements OnInit {
 
   escribiendoPass = false;
 
-  constructor(private authSvc: AuthService, private db: AngularFireDatabase) { }
+  constructor(
+     private authSvc: AuthService, private db: AngularFireDatabase
+    ) { }
 
   ngOnInit(): void {
   }

@@ -1,25 +1,16 @@
 import { Component } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { Usuario } from './modelos/Usuario';
 import { FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from './auth/services/auth.service';
 import { ProductosService } from './services/productos.service';
 import { Producto } from './modelos/Producto';
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-<<<<<<< HEAD
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'proyectoAngular';
-=======
   styleUrls: ['./app.component.css'],
   providers: [AuthService, ProductosService]
 })
+
 export class AppComponent {
 
   constructor(private authSvc: AuthService, private fs: ProductosService) {
@@ -62,13 +53,12 @@ export class AppComponent {
         let a = item.payload.toJSON();
         console.log(a);
 
-        productos.push(a as Producto);
+         productos.push(a as Producto);
       })
 
-      /*for (let p in productos) {
+      for (let p in productos) {
         console.log(p);
-      }*/
+      }
     })
   }
->>>>>>> 1aa9d60ad1b0b3644cbbb474812ed982cbea8982
 }
