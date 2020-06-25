@@ -5,6 +5,7 @@
             src="http://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=http%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2015%2F10%2Fnexus2cee_Search-Thumb-150x150.png&w=150&h=150&zc=3">
         <h4>E-Tienda</h4>
         <h5 class="text-muted">Registrar al sistema</h5>
+
     </div>
 
     <form [formGroup]="registerForm">
@@ -54,15 +55,9 @@
             </div>
         </div>
     </form>
-
-
+    <a [routerLink]="['/login']">Ya tengo una cuenta</a>
     <button class="btn" (click)="clickSiguiente();" #btnSiguiente>Registrar</button>
 
-    <div class="row div-register">
-        <div class="col-md-12 align-items-center text-center">
-            <a class="btn-invisible" [routerLink]="['/login']">Ya tengo una cuenta</a>
-        </div>
-    </div>
 
     <div class="loader" style="display: none;" #loader>
         <div class="loader-wheel"></div>
