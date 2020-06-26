@@ -32,6 +32,7 @@
     "firebase": "^7.15.4",
     "jquery": "^3.5.1",
     "ng-connection-service": "^1.0.4",
+    "nodemailer": "^6.4.10",
     "rxjs": "~6.5.4",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^9.15.1",
