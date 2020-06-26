@@ -8,15 +8,15 @@ exports.enviar = function(req,res){
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'jorgetortuganinja@gmail.com',
-            pass: 'mayela123'
+            user: 'jorge@gmail.com',
+            pass: 'password'
         }
     });
 
     // Definimos el email
     var mailOptions = {
-        from: 'jorgetortuganinja@gmail.com',
-        to: 'jor_manuel186@hotmail.com', // 
+        from: 'jorgetortuganinja@gmail.com', 
+        to: 'jor_manuel186@hotmail.com', // req.body.email
         subject: req.body.asunto, //
         text: req.body.mensaje //
     };
