@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors'); 
+const cors = require('cors');
 const misRouters = require('./rutas/ruta');
-// const nodemail= require('nodemailer');
+const mail = require('./rutas/sendmail');
 const app = express();
 app.use(cors());
 
@@ -15,15 +15,26 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 app.use('/', misRouters);
-
-//MAIL
-app.post('/enviar', function(req, res){
-    misRouters.enviar
-  });
-
 app.get('/', function (req, res) {
     res.send('Hello World');
 });
+
+
+//ENVIO DE CORREOS  //
+app.post('/enviar',mail.enviar);
+
+// (req, res) => {
+//     const email = req.body.email;
+//     const asunto = req.body.asunto;
+//     const mensaje = req.body.mensaje;
+
+// });
+app.post('/api/user', (req, res) => {
+    const user = req.body.user;
+    users.push(user);
+    res.json("user addedd");
+});
+
 
 app.listen(port, () => {
     console.log(`El Servidor esta en: http://localhost:${port}`);

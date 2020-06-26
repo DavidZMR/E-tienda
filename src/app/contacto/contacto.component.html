@@ -89,7 +89,7 @@
 
                 <!--Grid column-->
                 <div class="col-md-9 mb-md-0 mb-5">
-                  <form id="contact-form" name="contact-form" action="/enviar" method="POST">
+                  <form id="contact-form" name="contact-form" action="http://localhost:3000/enviar" (ngSubmit)="submit()" method="POST">
 
                     <!--Grid row-->
                     <div class="row">
@@ -101,6 +101,7 @@
                           <label for="name" class="">Tu Nombre</label>
                         </div>
                       </div>
+
                       <!--Grid column-->
 
                       <!--Grid column-->
@@ -137,16 +138,17 @@
                             class="form-control md-textarea"></textarea>
                           <label for="message">Tu mensaje</label>
                         </div>
-
+                        <div class="text-center text-md-left">
+                          <!-- <input type="submit"> -->
+                          <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();" (ngSubmit)="submit()">Enviar</a>
+                        </div>
                       </div>
                     </div>
                     <!--Grid row-->
 
                   </form>
 
-                  <div class="text-center text-md-left">
-                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Enviar</a>
-                  </div>
+                  
                   <div class="status"></div>
                 </div>
                 <!--Grid column-->
