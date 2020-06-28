@@ -50,6 +50,8 @@ import { LoginComponent } from './componentes/login/login/login.component';
 import { RegisterComponent } from './componentes/login/register/register.component';
 import { TelefonoComponent } from './componentes/login/telefono/telefono.component';
 import { LoginButtonsComponent } from './componentes/login-buttons/login-buttons.component';
+import { ProximamenteComponent } from './proximamente/proximamente.component';
+import { PromocionesComponent } from './promociones/promociones.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,9 @@ import { LoginButtonsComponent } from './componentes/login-buttons/login-buttons
     LoginComponent,
     RegisterComponent,
     TelefonoComponent,
-    LoginButtonsComponent  
+    LoginButtonsComponent,
+    ProximamenteComponent,
+    PromocionesComponent  
   ],
   imports: [
     BrowserModule,
