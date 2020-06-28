@@ -3,6 +3,25 @@
     <mat-card class="matheader">
       <h1><b>E-Tienda México – Telefono 01800 y medios de contacto</b></h1>
     </mat-card>
+    <mat-card>
+      <div class="example-button-row">
+          <button mat-stroked-button>
+              <img src="../../assets/logoAcc/acc.png" alt="" srcset="" width="50" height="50">
+          </button>
+          <button mat-stroked-button (click) = "start()">
+              <img src="../../assets/logoAcc/on.png" alt="" srcset="" width="50" height="50">
+          </button>
+          <button mat-stroked-button (click) = "pause()">
+              <img src="../../assets/logoAcc/pausa.png" alt="" srcset="" width="50" height="50">
+          </button>
+          <button mat-stroked-button (click) = "resume()">
+              <img src="../../assets/logoAcc/play.png" alt="" srcset="" width="50" height="50">
+          </button>
+          <button mat-stroked-button (click) = "cancelar()">
+              <img src="../../assets/logoAcc/cancelar.png" alt="" srcset="" width="50" height="50">
+          </button>
+      </div>
+  </mat-card>
   </div>
 </header>
 
