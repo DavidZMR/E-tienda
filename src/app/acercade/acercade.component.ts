@@ -8,7 +8,7 @@ import Speech from 'speak-tts';
 })
 export class AcercadeComponent implements OnInit {
   speech: any;
-  datos: string = "Hola mundo, Hola mundo";
+  datos: string;
 
   constructor() {
     this.speech = new Speech();
@@ -25,6 +25,16 @@ export class AcercadeComponent implements OnInit {
         });
         
     }
+    this.datos += "¿Quiénes Somos?..¿Qué es E-Tienda?.Somos la tienda online de abarrotes líder de América Latina";
+    this.datos += "y nuestro propósito es  democratizar el comercio y el dinero para impactar en el desarrollo de la región...";
+    this.datos += "Nacimos en 1999 y actualmente operamos en 18 países de la región. En pocos años, logramos convertirnos en la ";
+    this.datos += "séptima plataforma de comercio electrónico del mundo...";
+    this.datos += " En 2017 lanzamos E-Crédito, orientada a democratizar ";
+    this.datos += "el acceso al crédito y potenciar la inclusión financiera. Y, en 2019, celebramos 20 años de vida con una ";
+    this.datos += "fuerte apuesta a seguir democratizando el comercio y las finanzas...";
+    this.datos += "Los compradores sólo deben registrarse en el sitio, buscar los productos o servicios que necesitan y hacer clic en el botón comprar... ";
+    this.datos += "SIGUENOS EN NUESTRAS REDES SOCIALES";
+
   }
 
   ngOnInit(): void {
@@ -48,7 +58,7 @@ export class AcercadeComponent implements OnInit {
   }
 
   cancelar(){
-    Speech.cancel();
+    this.speech.cancel();
     console.log("f3");
   }
 }
