@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./promociones.component.css']
 })
 export class PromocionesComponent implements OnInit {
+  prom:any;
 
   constructor() { }
 

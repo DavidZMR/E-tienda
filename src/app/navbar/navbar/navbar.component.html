@@ -43,8 +43,8 @@
             </li>
 
             <!-- Consultas de usuarios -->
-            <li class="nav-item" routerLinkActive="active" *ngIf="true">
-                <a [matMenuTriggerFor]="appMenu2" id="len4" class="nav-link hoverable">Solo usuarios</a>
+            <li class="nav-item" routerLinkActive="active" *ngIf=login>
+                <a [matMenuTriggerFor]="appMenu2" id="len4" class="nav-link hoverable">Extras</a>
                 <!-- Uso de mat-menu de Angular Material -->
                 <mat-menu #appMenu2="matMenu">
                     <button mat-menu-item [routerLink]="['promociones']"> Promociones</button>

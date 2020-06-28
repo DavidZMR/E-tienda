@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   showFiller = false;
+  login:boolean = true;
+
   constructor(private router:Router) { }
 
   ngOnInit(): void {
