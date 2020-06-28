@@ -65,6 +65,7 @@ export class ContactoComponent implements OnInit {
     this.speech.cancel();
     console.log("f3");
   }
+  
   ngOnInit(): void {
   }
 
