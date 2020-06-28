@@ -41,6 +41,17 @@
                     <button mat-menu-item [routerLink]="['preguntas']">Preguntas Frecuentes</button>
                 </mat-menu>
             </li>
+
+            <!-- Consultas de usuarios -->
+            <li class="nav-item" routerLinkActive="active" *ngIf="true">
+                <a [matMenuTriggerFor]="appMenu2" id="len4" class="nav-link hoverable">Solo usuarios</a>
+                <!-- Uso de mat-menu de Angular Material -->
+                <mat-menu #appMenu2="matMenu">
+                    <button mat-menu-item [routerLink]="['promociones']"> Promociones</button>
+                    <button mat-menu-item [routerLink]="['proximamente']"> Proximante</button>
+                </mat-menu>
+            </li>
+
         </ul>
 
         <!-- LEMA -->

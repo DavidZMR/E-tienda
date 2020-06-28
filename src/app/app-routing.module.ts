@@ -11,6 +11,8 @@ import { BuscadorComponent } from './buscador/buscador.component';
 import { ArticuloComponent } from '../app/articulo/articulo.component';
 import { RegisterComponent } from './componentes/login/register/register.component';
 import { LoginComponent } from './componentes/login/login/login.component';
+import { ProximamenteComponent } from './proximamente/proximamente.component';
+import { PromocionesComponent } from './promociones/promociones.component';
 
 const routes: Routes = [
 
@@ -25,9 +27,9 @@ const routes: Routes = [
   { path: 'buscador/:nombre', component: BuscadorComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'promociones', component: PromocionesComponent},
+  { path: 'proximamente', component: ProximamenteComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
-
-
 ];
 
 @NgModule({

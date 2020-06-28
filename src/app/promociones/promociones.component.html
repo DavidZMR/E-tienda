@@ -1,1 +1,88 @@
-<p>promociones works!</p>
+<div class="row">
+  <div class="col-md-4">
+
+    <mdb-card cascade="true" wider="true">
+      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <!-- Card 1 -->
+      <mdb-card-body cascade="true" class="text-center">
+        <h4 class="card-title">
+          <strong>Coca-Cola lata 473ml</strong>
+        </h4>
+        <h5 class="indigo-text">
+          <strong>$15.00</strong>
+        </h5>
+
+        <mdb-card-text>
+          ¿Quieres una porción de Coca-Cola Original con menos de 100 calorías?
+          Llévate la presentación de Lean Can 473 ml para que sigas disfrutando de nuestro delicioso y refrescante
+          sabor
+        </mdb-card-text>
+        <a mdbBtn color="unique" [routerLink]="['/articulo',0]" class="waves-light" mdbWavesEffect>Comprar</a>
+      </mdb-card-body>
+    </mdb-card>
+
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-md-4">
+
+    <mdb-card cascade="true" narrower="true">
+
+      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <mdb-card-body cascade="true" class="text-center">
+        <h5 class="pink-text">
+
+          <h4 class="card-title"><strong>E-pura 1 L</strong> </h4>
+
+          <strong>$11.00</strong>
+        </h5>
+        <mdb-card-text>
+          Es el agua perfecta que te llena de un bienestar profundo que te impulsa y
+          te inspira a realizar esos grandes retos. Tu cuerpo es maravilloso. e pura Ama tu cuerpo.
+          <br>
+        </mdb-card-text>
+
+        <a mdbBtn color="unique" [routerLink]="['/articulo',2]" class="waves-light" mdbWavesEffect>Comprar</a>
+
+      </mdb-card-body>
+    </mdb-card>
+  </div>
+  <!-- Card 3 -->
+  <div class="col-md-4">
+    <mdb-card cascade="true">
+
+      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <mdb-card-body cascade="true" class="text-center">
+        <h4 class="card-title">
+          <strong>Doritos 550mg</strong>
+        </h4>
+        <h5><strong>$16.00</strong></h5>
+
+        <mdb-card-text>
+          ¡ATRÉVETE A PROBARLOS!
+          Disfruta de todo el crujido de Doritos® con la intensidad del auténtico sabor del queso que te llena de un
+          bienestar profundo.
+
+        </mdb-card-text>
+        <a mdbBtn color="unique" [routerLink]="['/articulo',1]" class="waves-light" mdbWavesEffect>Comprar</a>
+
+      </mdb-card-body>
+
+    </mdb-card>
+    <br><br><br><br>
+  </div>
+</div>
