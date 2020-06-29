@@ -210,7 +210,11 @@ export class LoginComponent implements OnInit {
       })
       
     });
+
+    
   }
+
+
 
   public sendError(msg: string) {
     Swal.fire({
