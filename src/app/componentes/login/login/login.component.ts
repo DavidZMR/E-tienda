@@ -198,7 +198,8 @@ export class LoginComponent implements OnInit {
       if (item.length < 5) {//Si no tiene un teléfono
         this.router.navigate(['/verificar-telefono']);
       } else {
-        location.reload();
+        //location.reload();
+        this.router.navigate(['/home']);
       }
 
       Swal.fire({
