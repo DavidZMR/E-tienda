@@ -3,6 +3,7 @@ import Swal from 'sweetalert2'
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { Usuario } from 'src/app/modelos/Usuario';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
   escribiendoPass = false;
 
   constructor(
-     private authSvc: AuthService, private db: AngularFireDatabase
+     private authSvc: AuthService, private db: AngularFireDatabase, private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -191,8 +192,15 @@ export class LoginComponent implements OnInit {
       usuario.apellidos = item[0].toString();
       usuario.correo = item[1].toString();
       usuario.id = item[2].toString();
-      location.reload();
+      
       localStorage.setItem('usuario', JSON.stringify(usuario));
+
+      if (item.length < 5) {//Si no tiene un teléfono
+        this.router.navigate(['/verificar-telefono']);
+      } else {
+        //location.reload();
+        this.router.navigate(['/home']);
+      }
 
       Swal.fire({
         icon: 'success',

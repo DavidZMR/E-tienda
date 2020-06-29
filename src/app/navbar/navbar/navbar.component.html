@@ -67,10 +67,13 @@
         <div>
 
             <a [matMenuTriggerFor]="userMenu" id="len4"><i class="fas fa-user-circle fa-2x" style="color: white;"></i></a>
-
+<!---->
             <mat-menu #userMenu="matMenu">
+                <app-login-buttons ></app-login-buttons>
+                <!--
                 <button mat-menu-item [routerLink]="['register']">Registrarse</button>
                 <button mat-menu-item [routerLink]="['login']">Ingresar</button>
+            -->
             </mat-menu>             
         </div>
     </div>

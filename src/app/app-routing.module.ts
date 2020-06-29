@@ -13,6 +13,7 @@ import { RegisterComponent } from './componentes/login/register/register.compone
 import { LoginComponent } from './componentes/login/login/login.component';
 import { ProximamenteComponent } from './proximamente/proximamente.component';
 import { PromocionesComponent } from './promociones/promociones.component';
+import { TelefonoComponent } from './componentes/login/telefono/telefono.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'preguntas', component: PreguntasComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'ingreso', component: IngresoComponent },
+  { path: 'verificar-telefono', component: TelefonoComponent },
   { path: 'articulo/:id', component: ArticuloComponent },
   { path: 'buscador/:nombre', component: BuscadorComponent },
   { path: 'login', component: LoginComponent },
