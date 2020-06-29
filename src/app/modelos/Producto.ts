@@ -1,4 +1,6 @@
 export class Producto {
-    nombre: string;
-    cantidad: number;
+    des: string;
+    fecha: string;
+    nom: string;
+    precio: number;
 }

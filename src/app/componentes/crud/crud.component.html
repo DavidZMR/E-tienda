@@ -1,0 +1,43 @@
+<div class="container background">
+    <h3>Que deseas realizar</h3>
+    <table class="tabla" style="width: 100%;">
+        <tr>
+            <th>
+                <button (click)="agregar()">Agregar Producto</button>
+            </th>
+            <th>
+                <button (click)="actualizar()">Actualizar Producto</button>
+            </th>
+            <th>
+                <button (click)="eliminar()">Eliminar Producto</button>
+            </th>
+        </tr>
+    </table>
+    <div *ngIf="mostrarAgregar">
+        <h2>Agrega el Producto</h2>
+        <mat-card-content>
+            <form id="Altas" [formGroup]="altas" (ngSubmit)="altasSubmit()">
+                <mat-form-field>
+                    <input matInput placeholder="Nombre" formControlName="nombre" name="nombre" class="form-control">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Descripcion" formControlName="des" name="des" class="form-control">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Precio" formControlName="precio" name="precio" class="form-control">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Fecha" formControlName="fecha" name="fecha" class="form-control">
+                </mat-form-field><br>
+                <button id="btnAltas" mat-raised-button type="submit" color="primary">Agregar</button>
+            </form>
+        </mat-card-content>
+    </div>
+    <div *ngIf="mostrarEliminar">
+
+    </div>
+    <div *ngIf="mostrarActualizar">
+
+    </div>
+
+</div>

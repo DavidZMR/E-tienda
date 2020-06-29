@@ -18,10 +18,12 @@ export class ProductosService {
     return this.items;
   }
 
-  addProducto(nombre: string, cantidad: number) {
+  addProducto(des:string,fecha:string,nom: string, precio: number) {
     let prod = new Producto();
-    prod.nombre = nombre;
-    prod.cantidad = cantidad;
-    this.db.list('productos').push(prod);
+    prod.des= des;
+    prod.fecha=fecha;
+    prod.nom = nom;
+    prod.precio = precio;
+    this.db.list('prom/push').push(prod);
   }
 }

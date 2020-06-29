@@ -40,9 +40,9 @@ export class AppComponent {
     this.authSvc.fireRegister(correo, pass);
   }
 
-  addProducto(nombre: string) {
-    this.fs.addProducto(nombre, 3);
-  }
+  // addProducto(nombre: string) {
+  //   this.fs.addProducto(nombre, 3);
+  // }
 
   getProductos() {
     let s = this.fs.getProductos();
@@ -59,6 +59,6 @@ export class AppComponent {
       for (let p in productos) {
         console.log(p);
       }
-    })
+    });
   }
 }

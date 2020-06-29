@@ -52,6 +52,10 @@ import { TelefonoComponent } from './componentes/login/telefono/telefono.compone
 import { LoginButtonsComponent } from './componentes/login-buttons/login-buttons.component';
 import { ProximamenteComponent } from './proximamente/proximamente.component';
 import { PromocionesComponent } from './promociones/promociones.component';
+import { CrudComponent } from './componentes/crud/crud.component';
+
+//mora
+import { ProductosService } from './services/productos.service';
 
 @NgModule({
   declarations: [
@@ -74,7 +78,8 @@ import { PromocionesComponent } from './promociones/promociones.component';
     TelefonoComponent,
     LoginButtonsComponent,
     ProximamenteComponent,
-    PromocionesComponent  
+    PromocionesComponent,
+    CrudComponent  
   ],
   imports: [
     BrowserModule,
@@ -115,7 +120,8 @@ import { PromocionesComponent } from './promociones/promociones.component';
     AngularFireDatabaseModule
   ],
   providers: [
-    CheckSessionService
+    CheckSessionService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })
