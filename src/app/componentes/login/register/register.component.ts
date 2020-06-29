@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { Usuario } from 'src/app/modelos/Usuario';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -30,7 +31,7 @@ export class RegisterComponent implements OnInit {
 
   viendoPass = false;
 
-  constructor(private authSvc: AuthService, private db: AngularFireDatabase) { }
+  constructor(private authSvc: AuthService, private db: AngularFireDatabase, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -109,6 +110,8 @@ export class RegisterComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     })
+
+    this.router.navigate(['/login']);
   }
 
   validar(): boolean {

@@ -5,6 +5,7 @@ import * as firebase from 'firebase';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import Swal from 'sweetalert2'
 import { AngularFireDatabase } from '@angular/fire/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-telefono',
@@ -30,7 +31,7 @@ export class TelefonoComponent implements OnInit {
 
   isVerificandoCodigo: boolean = false;
 
-  constructor(private win: AuthService, private db: AngularFireDatabase) { }
+  constructor(private win: AuthService, private db: AngularFireDatabase, private router: Router) { }
 
   ngOnInit(): void {
     var json = JSON.parse(localStorage.getItem('usuario'));
@@ -130,7 +131,9 @@ export class TelefonoComponent implements OnInit {
             title: '¡Correcto!',
             showConfirmButton: false,
             timer: 1500
-          })
+          });
+          
+          this.router.navigate(['/home']);
         })
         .catch(error => {
           Swal.fire({
