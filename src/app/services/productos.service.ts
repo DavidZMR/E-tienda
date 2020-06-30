@@ -25,7 +25,7 @@ export class ProductosService {
     // prod.fecha= fecha;
     // prod.nom = nom;
     // prod.precio = precio;
-    console.log(prod);
+    console.log(prod+'servicio');
     this.db.list('promociones/prox').push(prod);
   }
 
