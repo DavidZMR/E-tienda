@@ -14,35 +14,42 @@ export class CrudComponent implements OnInit {
   mostrarEliminar:boolean=false;
   mostrarActualizar:boolean=false;
   fs;
-  altas;
+  altas;borrar;
+  p;
+  productos: Producto [];
 
-  constructor(public router:Router, public formBuilder:FormBuilder) {
+  constructor(public router:Router, public formBuilder:FormBuilder, public peticion:ProductosService) {
     this.altas=formBuilder.group({
-      nombre:['',Validators.required],
+      cantidad:['',Validators.required],
       des:['',Validators.required],
-      precio:['',Validators.required],
       fecha:['',Validators.required],
+      nombre:['',Validators.required],
+      precio:['',Validators.required]  
+    });
+    this.borrar=formBuilder.group({
+      eliminar:['',Validators.required]
     })
+    this.peticion.getProductos()
+    .snapshotChanges()
+    .subscribe(data => { // Using snapshotChanges() method to retrieve list of data along with metadata($key)
+      console.log("entre");
+      this.productos = [];
+      data.forEach(item => {
+        let a = item.payload.toJSON();
+        //a["nom"]=item.nom;
+        console.log(a);
+
+         this.productos.push(a as Producto);
+      })
+
+      for (this.p in this.productos) {
+        console.log(this.p);
+      }
+    });
    }
 
   ngOnInit(): void {
-  }
-  getProductos() {
-    let s = this.fs.getProductos();
-    s.snapshotChanges().subscribe(data => { // Using snapshotChanges() method to retrieve list of data along with metadata($key)
-
-      let productos = [];
-      data.forEach(item => {
-        let a = item.payload.toJSON();
-        console.log(a);
-
-         productos.push(a as Producto);
-      })
-
-      for (let p in productos) {
-        console.log(p);
-      }
-    });
+    
   }
 
   agregar():void{
@@ -53,15 +60,26 @@ export class CrudComponent implements OnInit {
   altasSubmit():void{
     if (this.altas.valid) {
       console.log(this.altas.value);
+      let a=this.altas.value;
+      console.log(a.cantidad);
+      this.peticion.addProducto(this.altas.value);
     }
     else {
-      alert ( " FILL ALL FIELDS ");
+      alert ( "Llena todos los campos porfavor ");
     }
   }
   eliminar():void{
     this.mostrarEliminar=true;
     this.mostrarActualizar=false;
     this.mostrarAgregar=false;
+  }
+  eliminarSubmit(){
+    if(this.borrar.valid){
+      this.peticion.eraseProducto(this.borrar.value.borrar);
+    }
+    else{
+      alert("Llena el campo");
+    }
   }
   actualizar():void{
     this.mostrarActualizar=true;

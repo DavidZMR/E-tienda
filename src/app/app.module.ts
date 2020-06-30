@@ -53,9 +53,12 @@ import { LoginButtonsComponent } from './componentes/login-buttons/login-buttons
 import { ProximamenteComponent } from './proximamente/proximamente.component';
 import { PromocionesComponent } from './promociones/promociones.component';
 import { CrudComponent } from './componentes/crud/crud.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { QRCodeModule } from 'angular2-qrcode';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 //mora
 import { ProductosService } from './services/productos.service';
+import { QrComponent } from './componentes/qr/qr.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +82,9 @@ import { ProductosService } from './services/productos.service';
     LoginButtonsComponent,
     ProximamenteComponent,
     PromocionesComponent,
-    CrudComponent  
+    CrudComponent,
+    QrComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -117,7 +122,9 @@ import { ProductosService } from './services/productos.service';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    NgxQRCodeModule, QRCodeModule,
+    HttpClientModule
   ],
   providers: [
     CheckSessionService,

@@ -4,6 +4,10 @@ const cors = require('cors');
 const misRouters = require('./rutas/ruta');
 const mail = require('./rutas/sendmail');
 const app = express();
+
+
+  
+
 app.use(cors());
 
 
@@ -34,6 +38,7 @@ app.post('/api/user', (req, res) => {
     users.push(user);
     res.json("user addedd");
 });
+
 
 
 app.listen(port, () => {

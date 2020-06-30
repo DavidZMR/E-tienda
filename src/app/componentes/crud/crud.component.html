@@ -1,5 +1,24 @@
 <div class="container background">
-    <h3>Que deseas realizar</h3>
+    <div>
+        <h2>Productos Existentes</h2>
+        <table class="tabla">
+            <tr>
+                <th>Descripcion</th>
+                <th>Fecha</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+            <tr *ngFor="let i of productos">
+                <td>{{i.des}}</td>
+                <td>{{i.fecha}}</td>
+                <td>{{i.nom}}</td>
+                <td>{{i.precio}}</td>
+            </tr>
+        </table>
+    </div>
+    
+    
+    <h2>Que deseas realizar</h2>
     <table class="tabla" style="width: 100%;">
         <tr>
             <th>
@@ -18,26 +37,37 @@
         <mat-card-content>
             <form id="Altas" [formGroup]="altas" (ngSubmit)="altasSubmit()">
                 <mat-form-field>
-                    <input matInput placeholder="Nombre" formControlName="nombre" name="nombre" class="form-control">
+                    <input matInput placeholder="Cantidad" formControlName="cantidad" name="cantidad" class="form-control">
                 </mat-form-field>
                 <mat-form-field>
                     <input matInput placeholder="Descripcion" formControlName="des" name="des" class="form-control">
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="Precio" formControlName="precio" name="precio" class="form-control">
+                    <input matInput placeholder="Fecha" formControlName="fecha" name="fecha" class="form-control">
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="Fecha" formControlName="fecha" name="fecha" class="form-control">
-                </mat-form-field><br>
+                    <input matInput placeholder="Nombre" formControlName="nombre" name="nombre" class="form-control">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Precio" formControlName="precio" name="precio" class="form-control">
+                </mat-form-field><br>       
                 <button id="btnAltas" mat-raised-button type="submit" color="primary">Agregar</button>
             </form>
         </mat-card-content>
     </div>
     <div *ngIf="mostrarEliminar">
-
+        <mat-card-content>
+            <form id="Eliminar" [formGroup]="borrar" (ngSubmit)="eliminarSubmit()">
+                <mat-form-field>
+                    <input matInput placeholder="Nombre A ELIMINAR" formControlName="eliminar" name="eliminar" class="form-control"><br>
+                    <button id="btnEliminar" mat-raised-button type="submit" color="primary">Agregar</button>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
     </div>
     <div *ngIf="mostrarActualizar">
-
+        
     </div>
-
+    <app-qr></app-qr>
+    <br><br><br><br>
 </div>
