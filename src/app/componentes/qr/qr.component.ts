@@ -17,15 +17,15 @@ export class QrComponent implements OnInit {
     email = 'Oscar@Mora.com',
     tel = '000 111 222';
 
-    this.vCardInfo = `BEGIN:VCARD
-VERSION:3.0
-N:${};${this.obj.nombre}
-FN:${surname} ${name}
-ORG:${this.obj.org}
-URL:${this.obj.descuento}
-EMAIL:${this.obj.correo}
-TEL;TYPE=voice,work,oref:${this.obj.Telefono}
-END:VCARD`
+//     this.vCardInfo = `BEGIN:VCARD
+// VERSION:3.0
+// N:${this.obj[0].nombre}
+// FN:${surname} ${name}
+// ORG:${this.obj[0].org}
+// URL:${this.obj[0].descuento}
+// EMAIL:${this.obj[0].correo}
+// TEL;TYPE=voice,work,oref:${this.obj[0].Telefono}
+// END:VCARD`
    }
    
 
