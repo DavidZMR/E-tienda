@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CodigoqrService} from '../../services/codigoqr.service';
+import { database } from 'firebase';
 @Component({
   selector: 'app-qr',
   templateUrl: './qr.component.html',
@@ -7,9 +8,24 @@ import {CodigoqrService} from '../../services/codigoqr.service';
 })
 export class QrComponent implements OnInit {
   vCardInfo:string;
-  obj;
+  obj:any;
   constructor(public codigoqrService:CodigoqrService) {
-    
+    let urlapi=`http://localhost:3000/qr`;
+    this.codigoqrService.getJson(urlapi)
+    .subscribe((data:any)=>{
+      console.log(data);
+      console.log(data["Telefono"]);
+      console.log(data.Telefono);
+      let nombre=data.nombre;
+      this.obj=data;
+      console.log(this.obj['Telefono']);
+      this.vCardInfo = 'BEGIN:VCARD VERSION:3.0 N:'+
+      nombre +nombre +' FN:'+nombre + nombre+'ORG:'+data.org+
+      'URL:'+data.descuento+
+      'EMAIL:'+data.correo+
+      'TEL;TYPE=voice,work,oref:'+data.Telefono+
+      'END:VCARD'
+    });
     let name = 'Oscar',
     surname = 'Mora',
     org = 'Google',
@@ -17,25 +33,12 @@ export class QrComponent implements OnInit {
     email = 'Oscar@Mora.com',
     tel = '000 111 222';
 
-//     this.vCardInfo = `BEGIN:VCARD
-// VERSION:3.0
-// N:${this.obj[0].nombre}
-// FN:${surname} ${name}
-// ORG:${this.obj[0].org}
-// URL:${this.obj[0].descuento}
-// EMAIL:${this.obj[0].correo}
-// TEL;TYPE=voice,work,oref:${this.obj[0].Telefono}
-// END:VCARD`
+   
    }
    
 
   ngOnInit(): void {
-    let urlapi=`http://localhost:3000/qr`;
-    this.codigoqrService.getJson(urlapi)
-    .subscribe((data:any)=>{
-      console.log(data);
-      this.obj=data;
-    });
+    
   }
 
 }
