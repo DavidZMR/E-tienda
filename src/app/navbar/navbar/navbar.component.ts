@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(private router:Router) {
     if (localStorage.getItem("usuario") === null) { 
-      console.log('no sesion');
+      this.login = false;
     }else{
       console.log("work");
       this.login = true;
