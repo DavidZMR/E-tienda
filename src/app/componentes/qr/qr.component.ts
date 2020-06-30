@@ -37,3 +37,5 @@ END:VCARD`
       this.obj=data;
     });
   }
+
+}
