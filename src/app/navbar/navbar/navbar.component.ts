@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   showFiller = false;
-  login:boolean = false;
+  login:boolean = true;
 
   constructor(private router:Router) {
     if (localStorage.getItem("usuario") === null) { 
