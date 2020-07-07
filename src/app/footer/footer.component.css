@@ -11,3 +11,11 @@
   .main {
     flex: 1;
   }
+
+  
+@media (max-width: 1400px) {
+    .letras-md {
+      font-size: 10px;
+      
+    }
+  }

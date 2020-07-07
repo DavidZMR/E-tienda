@@ -13,10 +13,10 @@
 </ng-template>
 -->
 <ng-container *ngIf="!session; else elseTemplate" class="">
-    <button  class="btn d-block" type="button" (click)="goLogin()">Login </button>
-    <button  class="btn d-block" type="button" (click)="goRegister()">Sign in</button>
+    <button  class="btn d-block boton" type="button" (click)="goLogin()">Login </button>
+    <button  class="btn d-block boton" type="button" (click)="goRegister()">Sign in</button>
 </ng-container>
 
 <ng-template #elseTemplate >
-    <button class="btn" type="button" (click)="logout()">Logout</button>
+    <button class="btn boton" type="button" (click)="logout()">Logout</button>
 </ng-template>

@@ -5,23 +5,23 @@
     </mat-card>
     <mat-card>
       <div class="example-button-row">
-          <button mat-stroked-button>
-              <img src="../../assets/logoAcc/acc.png" alt="" srcset="" width="50" height="50">
-          </button>
-          <button mat-stroked-button (click) = "start()">
-              <img src="../../assets/logoAcc/on.png" alt="" srcset="" width="50" height="50">
-          </button>
-          <button mat-stroked-button (click) = "pause()">
-              <img src="../../assets/logoAcc/pausa.png" alt="" srcset="" width="50" height="50">
-          </button>
-          <button mat-stroked-button (click) = "resume()">
-              <img src="../../assets/logoAcc/play.png" alt="" srcset="" width="50" height="50">
-          </button>
-          <button mat-stroked-button (click) = "cancelar()">
-              <img src="../../assets/logoAcc/cancelar.png" alt="" srcset="" width="50" height="50">
-          </button>
+        <button mat-stroked-button>
+          <img src="../../assets/logoAcc/acc.png" alt="" srcset="" width="50" height="50">
+        </button>
+        <button mat-stroked-button (click)="start()">
+          <img src="../../assets/logoAcc/on.png" alt="" srcset="" width="50" height="50">
+        </button>
+        <button mat-stroked-button (click)="pause()">
+          <img src="../../assets/logoAcc/pausa.png" alt="" srcset="" width="50" height="50">
+        </button>
+        <button mat-stroked-button (click)="resume()">
+          <img src="../../assets/logoAcc/play.png" alt="" srcset="" width="50" height="50">
+        </button>
+        <button mat-stroked-button (click)="cancelar()">
+          <img src="../../assets/logoAcc/cancelar.png" alt="" srcset="" width="50" height="50">
+        </button>
       </div>
-  </mat-card>
+    </mat-card>
   </div>
 </header>
 
@@ -93,7 +93,7 @@
 
       <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-xl"  role="document">
+        <div class="modal-dialog modal-xl" role="document">
           <div class="modal-content " style="margin: 15px; padding: 3%;">
             <!--Section: Contact v.2-->
             <section class="mb-4">
@@ -101,14 +101,16 @@
               <!--Section heading-->
               <h2 class="h1-responsive font-weight-bold text-center my-4">Contactanos</h2>
               <!--Section description-->
-              <p class="text-center w-responsive mx-auto mb-5">Tienes alguna duda? Por favor no dudes en contactarnos directamente.
-                 Estaremos contestando lo más pronto posible para ayudarte!</p>
+              <p class="text-center w-responsive mx-auto mb-5">Tienes alguna duda? Por favor no dudes en contactarnos
+                directamente.
+                Estaremos contestando lo más pronto posible para ayudarte!</p>
 
               <div class="row">
 
                 <!--Grid column-->
                 <div class="col-md-9 mb-md-0 mb-5">
-                  <form id="contact-form" name="contact-form" action="http://localhost:3000/enviar" (ngSubmit)="submit()" method="POST">
+                  <form id="contact-form" name="contact-form" action="http://localhost:3000/enviar"
+                    (ngSubmit)="submit()" method="POST">
 
                     <!--Grid row-->
                     <div class="row">
@@ -159,7 +161,8 @@
                         </div>
                         <div class="text-center text-md-left">
                           <!-- <input type="submit"> -->
-                          <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();" (ngSubmit)="submit()">Enviar</a>
+                          <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();"
+                            (ngSubmit)="submit()">Enviar</a>
                         </div>
                       </div>
                     </div>
@@ -167,7 +170,7 @@
 
                   </form>
 
-                  
+
                   <div class="status"></div>
                 </div>
                 <!--Grid column-->
@@ -207,11 +210,17 @@
       </div>
 
       <p><b>Redes sociales</b></p>
-      <ul>
-        <li>Twitter: <a href="https://twitter.com">https://twitter.com/ET_Mexico</a></li>
-        <li>Redes Sociales: <a href="https://facebook.com"> https://www.facebook.com/E-Tienda</a></li>
-        <li>YouTube: <a href="https://youtube.com">https://www.youtube.com/user/E-Tienda</a> </li>
-      </ul>
+      <p>
+        <b>SIGUENOS EN NUESTRAS REDES SOCIALES:</b>
+      </p>
+      <div>
+        <a href="www.facebook.com"><i class="fab fa-facebook fa-3x"></i></a>
+        <p><b>Facebook</b></p>
+        <a href="www.instagram.com"><i class="fab fa-instagram fa-3x"></i></a>
+        <p><b>Instagram</b></p>
+        <a href="www.twitter.com"><i class="fab fa-twitter fa-3x"></i></a>
+        <p><b>Twitter</b></p>
+      </div>
       <br><br><br><br>
 
 

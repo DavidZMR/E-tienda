@@ -27,12 +27,6 @@ app.get('/', function (req, res) {
 //ENVIO DE CORREOS  //
 app.post('/enviar',mail.enviar);
 
-// (req, res) => {
-//     const email = req.body.email;
-//     const asunto = req.body.asunto;
-//     const mensaje = req.body.mensaje;
-
-// });
 app.post('/api/user', (req, res) => {
     const user = req.body.user;
     users.push(user);

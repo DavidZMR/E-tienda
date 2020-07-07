@@ -3,12 +3,11 @@
 <h1 class="animated fadeIn">{{articulo.nombre}}</h1>
 <hr>
 
-<div class="row animated fadeIn fast">
+<div class="row animated fadeIn fast centrarmd">
 
     <div class="col md-4 text-center">
         <img width="300px" src="{{articulo.img}}" alt="" class="img-fluid">
         <br><br>
-        <a [routerLink]="['/articulos']" class="btn btn-outline-danger btn-block">Regresar</a>
     </div>
 
     <div class="col md-8">
@@ -24,5 +23,14 @@
             {{articulo.descripcion}}
         </mdb-card-text>
     </div>
+    
+<div>
+    <br>
+    <a [routerLink]="['/articulos']" class="btn btn-outline-danger btn-block centrar boton">Regresar</a>
+    <br>
+    <a [routerLink]="['/articulos']" class="btn btn-outline-success btn-block centrar boton">Comprar</a>
 
+</div>
+
+<br><br><br>
 </div>

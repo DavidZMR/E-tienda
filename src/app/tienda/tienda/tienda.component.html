@@ -2,7 +2,7 @@
 <div class="content main">
 
   <!-- MAT GRID LIST -->                                                                          <!--2:1-->
-    <mat-grid-list class="list" [responsive]="responsive" (responsiveColsChange)="cols = $event" rowHeight="1:2" gutterSize="20px">
+    <mat-grid-list class="list" [responsive]="responsive" (responsiveColsChange)="cols = $event" rowHeight="1:1.6" gutterSize="10px">
       <mat-grid-tile *ngFor="let h of misarticulos, let i=index" >
   
         <!-- Card dentro de un grid list de angular material -->
@@ -26,10 +26,12 @@
             <mdb-card-text>
               {{h.descripcion}}
             </mdb-card-text>
-            <a mdbBtn color="unique" [routerLink]="['/articulo',i]" class="waves-light" mdbWavesEffect>Comprar</a>
+            <a mdbBtn color="unique" [routerLink]="['/articulo',i]" class="waves-light boton" mdbWavesEffect>Comprar</a>
           </mdb-card-body>
         </mdb-card>
   
       </mat-grid-tile>
     </mat-grid-list>
+
+    <br><br>
   

@@ -22,17 +22,17 @@
 
 
             <!-- HOME -->
-            <li class="nav-item" routerLinkActive="active">
+            <li class="nav-item center" routerLinkActive="active">
                 <a id="len1" class="nav-link hoverable" [routerLink]="['home']">Home</a>
             </li>
 
             <!-- TIENDA -->
-            <li class="nav-item" routerLinkActive="active">
+            <li class="nav-item center" routerLinkActive="active">
                 <a id="len2" class="nav-link hoverable" [routerLink]="['tienda']">Tienda</a>
             </li>
 
             <!-- ABOUT -->
-            <li class="nav-item" routerLinkActive="active">
+            <li class="nav-item center" routerLinkActive="active">
                 <a [matMenuTriggerFor]="appMenu" id="len3" class="nav-link hoverable">About</a>
                 <!-- Uso de mat-menu de Angular Material -->
                 <mat-menu #appMenu="matMenu">
@@ -43,7 +43,7 @@
             </li>
 
             <!-- Consultas de usuarios -->
-            <li class="nav-item" routerLinkActive="active" *ngIf=login>
+            <li class="nav-item center" routerLinkActive="active" *ngIf=login>
                 <a [matMenuTriggerFor]="appMenu2" id="len4" class="nav-link hoverable">Extras</a>
                 <!-- Uso de mat-menu de Angular Material -->
                 <mat-menu #appMenu2="matMenu">
@@ -55,12 +55,12 @@
         </ul>
 
         <!-- LEMA -->
-        <small class="lema">Las Compras del Futuro</small>
+        <small class="lema hidden-xs hidden-md">Las Compras del Futuro</small>
 
         <!-- BUSQUEDA -->
-        <div class="form-inline my-2 my-lg-0 busqueda">
+        <div class="form-inline my-2 my-lg-0 busqueda centrar centrarmd">
             <input class="form-control mr-sm-2" type="text" placeholder="Buscar" #buscarTexto (keyup.enter)="buscar(buscarTexto.value)">
-            <button (click)="buscar(buscarTexto.value)" class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
+            <button (click)="buscar(buscarTexto.value)" class="btn btn-outline-success my-2 my-sm-0 boton" type="button">Buscar</button>
 
         </div>
 
