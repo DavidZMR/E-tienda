@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit {
   escribiendoPass = false;
 
   constructor(
-     private authSvc: AuthService, private db: AngularFireDatabase, private router: Router
-    ) { }
+    private authSvc: AuthService, private db: AngularFireDatabase, private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -192,26 +192,26 @@ export class LoginComponent implements OnInit {
       usuario.apellidos = item[0].toString();
       usuario.correo = item[1].toString();
       usuario.id = item[2].toString();
-      
+
       localStorage.setItem('usuario', JSON.stringify(usuario));
 
       if (item.length < 5) {//Si no tiene un teléfono
         this.router.navigate(['/verificar-telefono']);
       } else {
         //location.reload();
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
       }
 
       Swal.fire({
         icon: 'success',
-        title: '¡Bienvenido ' + usuario.nombre + '!' ,
+        title: '¡Bienvenido ' + usuario.nombre + '!',
         showConfirmButton: false,
         timer: 1500
       })
-      
+
     });
 
-    window.location.reload(); 
+    window.location.reload();
   }
 
 
