@@ -15,6 +15,7 @@ import { ProximamenteComponent } from './proximamente/proximamente.component';
 import { PromocionesComponent } from './promociones/promociones.component';
 import { TelefonoComponent } from './componentes/login/telefono/telefono.component';
 import { CrudComponent } from './componentes/crud/crud.component';
+import { GraficaUsuarioComponent } from './grafica-usuario/grafica-usuario.component';
 
 const routes: Routes = [
 
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'promociones', component: PromocionesComponent},
   { path: 'proximamente', component: ProximamenteComponent},
+  { path: 'grafica', component: GraficaUsuarioComponent},
   { path: 'crud', component: CrudComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];

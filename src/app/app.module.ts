@@ -60,7 +60,8 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { ProductosService } from './services/productos.service';
 import { QrComponent } from './componentes/qr/qr.component';
 import { GraficasComponent } from './componentes/graficas/graficas.component';
-import { ChartsModule } from 'ng2-charts'
+import { ChartsModule } from 'ng2-charts';
+import { GraficaUsuarioComponent } from './grafica-usuario/grafica-usuario.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,6 +87,7 @@ import { ChartsModule } from 'ng2-charts'
     CrudComponent,
     QrComponent,
     GraficasComponent,
+    GraficaUsuarioComponent,
     
   ],
   imports: [
