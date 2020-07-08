@@ -204,7 +204,7 @@ export class LoginComponent implements OnInit {
 
       Swal.fire({
         icon: 'success',
-        title: '¡Bienvenido ' + usuario.nombre + '!',
+        title: '¡Bienvenido ' + usuario.nombre + '!' ,
         showConfirmButton: false,
         timer: 1500
       })

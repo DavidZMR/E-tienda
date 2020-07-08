@@ -57,7 +57,12 @@
 
         <!-- LEMA -->
         <small class="lema hidden-xs hidden-md">Las Compras del Futuro</small>
-
+        
+        <!-- USUARIO LOGIADO -->
+        <li *ngIf="session" class="nav-item center" routerLinkActive="disabled" >
+            <a id="len5" class="nav-link hoverable" [routerLink]="['*']"> Bienvenido {{ usu.nombre }}</a>
+        </li>
+        
         <!-- BUSQUEDA -->
         <div class="form-inline my-2 my-lg-0 busqueda centrar centrarmd">
             <input class="form-control mr-sm-2" type="text" placeholder="Buscar" #buscarTexto (keyup.enter)="buscar(buscarTexto.value)">

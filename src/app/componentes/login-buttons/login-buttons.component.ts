@@ -1,4 +1,5 @@
 import { CheckSessionService } from './../../services/check-session.service';
+import Swal from 'sweetalert2'
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -10,11 +11,13 @@ import { Router } from '@angular/router';
 })
 export class LoginButtonsComponent implements OnInit {
   session: boolean = false;
-  
+  usu: any;
 
   constructor(public checkSessionService: CheckSessionService, public router: Router) { 
+    this.session = false;
     this.checkSession();
-    console.log(this.session, localStorage['usuario']);
+    this.usu = JSON.parse(localStorage.getItem('usuario'));
+    console.log(this.usu.nombre, localStorage['usuario']);
    }
 
   ngOnInit(): void {
@@ -29,7 +32,17 @@ export class LoginButtonsComponent implements OnInit {
   logout(){
     localStorage.removeItem('usuario');
     console.log(localStorage['usuario']);
+    Swal.fire({
+      icon: 'success',
+      title: 'Sesion Cerrada',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    this.sleep(3000);
     location.reload();
+  }
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   checkSession(){
