@@ -16,7 +16,7 @@ exports.enviar = function(req,res){
     // Definimos el email
     var mailOptions = {
         from: 'pruebaangular01@gmail.com',
-        to: req.body.email, // aqui va el mail de a quien se mandará 
+        to: 'jor_manuel186@hotmail.com', // aqui va el mail de a quien se mandará 
         subject: req.body.asunto, // 
         text: req.body.mensaje //
     };

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ArticulosService, Articulo } from '../articulos.service';
 import {ActivatedRoute} from '@angular/router';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-articulo',
@@ -23,5 +23,15 @@ export class ArticuloComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  comprado(){
+    Swal.fire({
+      title: '¡Artículo Comprado!',
+      text: 'Compraste exitosamente.' ,
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    })
+  }
+  
 }
+
 

@@ -69,9 +69,15 @@ export class ContactoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit(){
-    Swal.fire('¡Muy Bien!', '¡Tu Correo ha sido enviado exitosamente!', 'success');
+  enviado(){
+    Swal.fire({
+      title: '¡Muy Bien!',
+      text: '¡Tu Correo ha sido enviado exitosamente!',
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    })
   }
+
 }
 
 
