@@ -61,7 +61,8 @@ import { ProductosService } from './services/productos.service';
 import { QrComponent } from './componentes/qr/qr.component';
 import { GraficasComponent } from './componentes/graficas/graficas.component';
 import { ChartsModule } from 'ng2-charts';
-import { GraficaUsuarioComponent } from './grafica-usuario/grafica-usuario.component'
+import { GraficaUsuarioComponent } from './grafica-usuario/grafica-usuario.component';
+import { PipePipe } from './pipes/pipe.pipe'
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,6 +89,7 @@ import { GraficaUsuarioComponent } from './grafica-usuario/grafica-usuario.compo
     QrComponent,
     GraficasComponent,
     GraficaUsuarioComponent,
+    PipePipe,
     
   ],
   imports: [

@@ -5,9 +5,9 @@
     <div class="card" *ngFor="let h of misarticulos, let i=index " ng-controller="AppCtrl as appCtrl" ng-cloak>
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{h.nombre}}</h5>
+            <h5 class="card-title">a{{h.nombre}}</h5>
             <p class="card-text">{{h.precio}}</p>
-            <p class="card-text"><small class="text-muted">{{h.descripcion}}</small></p>
+            <p class="card-text"><small class="text-muted">{{h.descripcion | pipe: 5}}</small></p>
             
         </div>
         <a [routerLink]="['/articulo',i]" class="btn btn-outline-primary btn-block">Ver más</a>

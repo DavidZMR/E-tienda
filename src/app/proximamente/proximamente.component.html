@@ -12,7 +12,7 @@
             <strong>{{ a.precio }}</strong>
           </h5>
           <mdb-card-text>
-            {{ a.des }}
+            {{ a.des | pipe: 70 }}
           </mdb-card-text>
           <a mdbBtn color="unique" class="waves-light" mdbWavesEffect>{{ a.fecha }}</a>
         </mdb-card-body>
