@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   session: boolean = false;
   usu: any; 
   usulog:any;
-
+  admin:boolean=false;
   constructor(private router:Router) {
     this.session=false;
     this.checkSession();
@@ -41,6 +41,8 @@ export class NavbarComponent implements OnInit {
       this.usu = JSON.parse(localStorage.getItem('usuario'));
       if(this.usu.correo == "rodrigoelmaps@gmail.com"){
         this.usulog = 'Admin';
+        this.admin=true;
+
       }else{
         this.usulog = this.usu.nombre;
       }

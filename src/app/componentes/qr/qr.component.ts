@@ -19,21 +19,13 @@ export class QrComponent implements OnInit {
       let nombre=data.nombre;
       this.obj=data;
       console.log(this.obj['Telefono']);
-      this.vCardInfo = 'Nombre'+
-      nombre+' '+data.Apellido +'\n Sitio web: '+data.org+
+      this.vCardInfo = 'Nombre '+
+      nombre+' '+data.Apellido +'\nSitio web: '+data.org+
       '\nValido por un descuento de: '+data.descuento+
-      '\nCodigo descuento ->: '+data.codigoDescuento+
+      '\nCodigo descuento -> '+data.codigoDescuento+
       '\nEMAIL: '+data.correo+
       '\nTelefono: '+data.Telefono;
     });
-    let name = 'Oscar',
-    surname = 'Mora',
-    org = 'Google',
-    url = 'www.google.com',
-    email = 'Oscar@Mora.com',
-    tel = '000 111 222';
-
-   
    }
    
 
