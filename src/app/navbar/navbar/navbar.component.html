@@ -10,7 +10,7 @@
             <img src="../../../assets/logo.png" alt="" width="50" height="50">
         </a>
     </div>
-
+ 
     <!-- NOMBRE DEL SITIO -->
     <div class="nav">
         <h1 class="title">E-TIENDA</h1>
@@ -52,16 +52,17 @@
                     <button mat-menu-item [routerLink]="['estadisticas']"> Estadística</button>
                 </mat-menu>
             </li>
+            <!-- USUARIO LOGIADO -->
+            <li *ngIf="session" class="nav-item center" routerLinkActive="disabled" >
+                <a id="len6" class="nav-link hoverable" [routerLink]=""> Bienvenido {{ usulog }}</a>
+            </li>
 
         </ul>
 
         <!-- LEMA -->
         <small class="lema hidden-xs hidden-md">Las Compras del Futuro</small>
         
-        <!-- USUARIO LOGIADO -->
-        <li *ngIf="session" class="nav-item center" routerLinkActive="disabled" >
-            <a id="len5" class="nav-link hoverable" [routerLink]="['*']"> Bienvenido {{ usu.nombre }}</a>
-        </li>
+        
         
         <!-- BUSQUEDA -->
         <div class="form-inline my-2 my-lg-0 busqueda centrar centrarmd">

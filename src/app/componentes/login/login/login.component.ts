@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { Usuario } from 'src/app/modelos/Usuario';
 import { AngularFireDatabase } from '@angular/fire/database';
