@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'promociones', component: PromocionesComponent},
   { path: 'proximamente', component: ProximamenteComponent},
-  { path: 'grafica', component: GraficaUsuarioComponent},
+  { path: 'estadisticas', component: GraficaUsuarioComponent},
   { path: 'crud', component: CrudComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
