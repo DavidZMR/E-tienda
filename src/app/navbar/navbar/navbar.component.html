@@ -55,7 +55,11 @@
             </li>
             <!-- USUARIO LOGIADO -->
             <li *ngIf="session" class="nav-item center" routerLinkActive="disabled" >
-                <a id="len6" class="nav-link hoverable" [routerLink]=""> Bienvenido {{ usulog }}</a>
+                <a id="len6" class="nav-link hoverable" [routerLink]=""> Bienvenido {{ usulog }}</a>    
+            </li>
+            <!-- admin loggeado podra ver crud -->
+            <li *ngIf="admin"class="nav-item center" routerLinkActive="active">
+                <a id="crud" class="nav-link hoverable" [routerLink]="['crud']"> CRUD ADMIN</a>
             </li>
 
         </ul>
