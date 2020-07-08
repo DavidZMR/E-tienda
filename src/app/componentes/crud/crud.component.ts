@@ -42,9 +42,10 @@ export class CrudComponent implements OnInit {
          this.productos.push(a as Producto);
       })
 
-      for (this.p in this.productos) {
-        console.log(this.p);
+      for (this.p of this.productos) {
+        //console.log(this.p);
       }
+      console.log(this.productos);
     });
    }
 
@@ -59,10 +60,13 @@ export class CrudComponent implements OnInit {
   }
   altasSubmit():void{
     if (this.altas.valid) {
+      
       console.log(this.altas.value);
       let a=this.altas.value;
-      console.log(a.cantidad);
-      this.peticion.addProducto(this.altas.value);
+      
+      console.log(a.nombre);
+      this.peticion.addProducto(a.cantidad,a.des,a.nombre,a.precio,a.fecha);
+      this.altas.reset();
     }
     else {
       alert ( "Llena todos los campos porfavor ");
@@ -75,7 +79,9 @@ export class CrudComponent implements OnInit {
   }
   eliminarSubmit(){
     if(this.borrar.valid){
-      this.peticion.eraseProducto(this.borrar.value.borrar);
+      console.log(this.borrar.value.eliminar);
+      this.peticion.eraseProducto(this.borrar.value.eliminar);
+      this.borrar.reset();
     }
     else{
       alert("Llena el campo");

@@ -18,18 +18,27 @@ export class ProductosService {
     return this.items;
   }
 
-  addProducto(prod:Producto) {
-    //let prod = new Producto();
-    //prod.cantidad=cantidad;
-    // prod.des= des;
-    // prod.fecha= fecha;
-    // prod.nom = nom;
-    // prod.precio = precio;
-    console.log(prod+'servicio');
-    this.db.list('promociones/prox').push(prod);
+  addProducto(cantidad,des,nombre,precio,fecha) {
+    let prod = new Producto();
+    prod.cantidad=cantidad;
+    prod.des= des;
+    prod.fecha= fecha;
+    prod.nombre = nombre;
+    prod.precio = precio;
+    console.log(prod.nombre+'servicio');
+    this.db.list('promociones/prox/'+prod.nombre).set("nombre", prod.nombre);
+    this.db.list('promociones/prox/'+prod.nombre).set("cantidad", prod.cantidad);
+    this.db.list('promociones/prox/'+prod.nombre).set("des", prod.des);
+    this.db.list('promociones/prox/'+prod.nombre).set("fecha", prod.fecha);
+    this.db.list('promociones/prox/'+prod.nombre).set("precio", prod.precio);
   }
 
   eraseProducto(nom:string){
+    console.log("entre a eliminar");
     this.db.list('promociones/prox').remove(nom);
+  }
+
+  updateProducto():void{
+
   }
 }

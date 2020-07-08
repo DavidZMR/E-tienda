@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
 import { CrudComponent } from '../crud/crud.component';
+import { Producto } from '../../modelos/Producto';
+import { ProductosService } from '../../services/productos.service';
 @Component({
   selector: 'app-graficas',
   templateUrl: './graficas.component.html',
@@ -18,41 +20,52 @@ export class GraficasComponent implements OnInit {
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
 
-  datos;
+  productos: Producto [];
   
   public barChartData: ChartDataSets[] = [
     { data: [1,1,1,1,1,1], label: 'Mercancia' }
    // { data: [1,1,1,1,1,1], label: 'Junio' }
   ];
   arreglo:number[][]=[[1,2,3,4,5,6],[0,0,0,0,0,0]];
-  constructor(public crudComponent:CrudComponent) { 
-    this.llenarArreglo();
-    console.log(this.arreglo);
-    this.datos=crudComponent.productos;
-    let i=0;
-    for (let dat of this.datos){
-      this.arreglo[0][i]=dat.cantidad;
-      i++;
+  nombres:string[]=[];
+  constructor(public crudComponent:CrudComponent, public peticion:ProductosService) { 
+    this.peticion.getProductos()
+    .snapshotChanges()
+    .subscribe(data => { // Using snapshotChanges() method to retrieve list of data along with metadata($key)
+      console.log("entre");
+      this.productos = [];
+      data.forEach(item => {
+        let a = item.payload.toJSON();
+        //a["nom"]=item.nom;
+        //console.log(a);
+         this.productos.push(a as Producto);
+      })
+      let i=0;
+      for (let p of this.productos) {
+        //console.log(this.p);
+        this.arreglo[0][i]=p.cantidad;
+        console.log(p.nombre);
+        this.nombres[i]=p.nombre;
+        i++;
+      }
+      this.barChartData[0].data = this.arreglo[0];
+      this.barChartLabels=this.nombres;
+      //console.log(this.productos);
+    });
+    
+    
     }
     
-        //console.log(this.barChartLabels.length);
-       // this.barChartData[0].data = this.arreglo[0];
+    
         
       
     
-  }
+  
 
   ngOnInit() {
   }
-  llenarArreglo(): void {
-    for(let a=0;a<2;a++){
-    for ( let i = 0; i < 6 ; i++){
-      this.arreglo[a][i]=(Math.floor((Math.random() * (i < 2 ? 100 : 200)) + 1));
-      
-    }
-  }
-  console.log(this.arreglo);
-  }
+ 
+  
   // events
   public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
@@ -62,13 +75,5 @@ export class GraficasComponent implements OnInit {
     console.log(event, active);
   }
 
-  public randomize(): void {
-    this.llenarArreglo();
-    // Only Change 3 values
-    for (let i=0; i<2;i++){
-      //console.log(this.barChartLabels.length);
-      this.barChartData[i].data = this.arreglo[i];
-    }
-  }
-
+  
 }

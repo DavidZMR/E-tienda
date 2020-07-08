@@ -59,7 +59,8 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
 //mora
 import { ProductosService } from './services/productos.service';
 import { QrComponent } from './componentes/qr/qr.component';
-
+import { GraficasComponent } from './componentes/graficas/graficas.component';
+import { ChartsModule } from 'ng2-charts'
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,6 +85,7 @@ import { QrComponent } from './componentes/qr/qr.component';
     PromocionesComponent,
     CrudComponent,
     QrComponent,
+    GraficasComponent,
     
   ],
   imports: [
@@ -124,7 +126,8 @@ import { QrComponent } from './componentes/qr/qr.component';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     NgxQRCodeModule, QRCodeModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [
     CheckSessionService,
