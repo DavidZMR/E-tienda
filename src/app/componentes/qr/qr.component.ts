@@ -10,7 +10,7 @@ export class QrComponent implements OnInit {
   vCardInfo:string;
   obj:any;
   constructor(public codigoqrService:CodigoqrService) {
-    let urlapi=`http://localhost:3000/qr`;
+    let urlapi=`http://m.fmaps.xyz:3000/qr`;
     this.codigoqrService.getJson(urlapi)
     .subscribe((data:any)=>{
       console.log(data);
