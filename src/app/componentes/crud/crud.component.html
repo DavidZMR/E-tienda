@@ -70,7 +70,34 @@
         </mat-card-content>
     </div>
     <div *ngIf="mostrarActualizar">
-        
+        <mat-card-content>
+            <form id="Actualizar" [formGroup]="actu" (ngSubmit)="actualizarSubmit()">
+                <mat-form-field>
+                    <input matInput placeholder="Nombre A Actualizar" formControlName="actualizar" name="actualizar" class="form-control"><br>
+                    <button id="btnActualizar" mat-raised-button type="submit" color="primary">Buscar</button>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-content *ngIf="banderaAct">
+            <form id="Actualizar1" [formGroup]="actualizar1" (ngSubmit)="actualizar1Submit()">
+                <mat-form-field>
+                    <input matInput placeholder="Cantidad" formControlName="cantidad" name="cantidad" class="form-control">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Descripcion" formControlName="des" name="des" class="form-control">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Fecha" formControlName="fecha" name="fecha" class="form-control">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Nombre" formControlName="nombre" name="nombre" class="form-control">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Precio" formControlName="precio" name="precio" class="form-control">
+                </mat-form-field><br>       
+                <button id="btnActualizar1" mat-raised-button type="submit" color="primary">Actualizar</button>
+            </form>
+        </mat-card-content>
     </div>
     
     <br><br><br><br>

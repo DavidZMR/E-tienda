@@ -38,7 +38,20 @@ export class ProductosService {
     this.db.list('promociones/prox').remove(nom);
   }
 
-  updateProducto():void{
-
+  updateProducto(cantidad,des,nombre,precio,fecha,id):void{
+    let prod = new Producto();
+    prod.cantidad=cantidad;
+    prod.des= des;
+    prod.fecha= fecha;
+    prod.nombre = nombre;
+    prod.precio = precio;
+    console.log(prod.nombre+'servicio');
+    this.db.list('promociones/prox/'+prod.nombre).update(id,{
+      nombre:prod.nombre,
+      cantidad:prod.cantidad,
+      des:prod.des,
+      fecha:prod.fecha,
+      precio:prod.precio
+    });
   }
 }
